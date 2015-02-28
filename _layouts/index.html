@@ -13,7 +13,7 @@
   <body>
     <aside id="sidebar">
       <nav id="tags">
-        <a href="/index.html" id="avatar"></a>
+        <a href="{{ site.baseurl }}/index.html" id="avatar"></a>
 
         <ul id="tags__ul">
           <li id="js-label1" class="tags__li tags-btn active">All Posts</li>
@@ -26,7 +26,7 @@
 
         <div id="tags__bottom">
           <a href="mailto:place_your_email_address_here" id="icon-email" class="tags-btn fontello"></a>
-          <a href="/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
+          <a href="{{ site.baseurl }}/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
         </div>
       </nav> <!-- end #tags -->
 
@@ -39,7 +39,7 @@
 
         <nav id="pl__container">
         {% for post in site.posts %}
-          <a class="{{ post.categories }} pl__all" href="{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%b %Y" }}</span></a>
+          <a class="{{ post.categories }} pl__all" href="{{ site.baseurl }}{{ post.url }}"><span class="pl__circle"></span><span class="pl__title">{{ post.title }}</span><span class="pl__date">{{ post.date | date: "%b %Y" }}</span></a>
         {% endfor %}
         </nav>
       </div> <!-- end #posts-list -->
@@ -60,9 +60,9 @@
 
     <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
 
-    <script src="/assets/js/jquery-2.0.3.min.js"></script>
-    <script src="/assets/js/jquery.pjax.js"></script>
-    <script src="/assets/js/nprogress.js"></script>
-    <script src="/assets/js/script.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/jquery.pjax.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/nprogress.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
   </body>
 </html>
